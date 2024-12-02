@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customizable 3D Binary Search Visualization with BST</title>
+  <style>
+   body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+#controls {
+  text-align: center;
+  margin: 10px;
+}
+
+#controls label {
+  margin-right: 5px;
+}
+
+#controls input {
+  margin-right: 15px;
+  width: 80px;
+}
+
+#controls button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+#info {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#threejs-container {
+  width: 100%;
+  height: calc(100vh - 200px); /* Adjusted height */
+  display: block;
+}
+
+#navigation {
+  text-align: center;
+  margin: 10px;
+}
+
+#navigation button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label for="arrayLength">Array Length:</label>
+    <input type="number" id="arrayLength" value="15" min="1" max="31" />
+    <label for="targetNumber">Target Number:</label>
+    <input type="number" id="targetNumber" value="10" />
+    <button id="startBtn">Start Visualization</button>
+  </div>
+  <div id="info"></div>
+  <div id="threejs-container"></div>
+  <div id="navigation">
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+  </div>
+
+  <!-- Include Three.js library from unpkg.com -->
+  <script src="https://unpkg.com/three@0.124.0/build/three.min.js"></script>
+
+  <!-- Include OrbitControls -->
+  <script src="https://unpkg.com/three@0.124.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- Include FontLoader -->
+  <script src="https://unpkg.com/three@0.124.0/examples/js/loaders/FontLoader.js"></script>
+
+  <!-- Include TextGeometry -->
+  <script src="https://unpkg.com/three@0.124.0/examples/js/geometries/TextGeometry.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
